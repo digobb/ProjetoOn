@@ -5,3 +5,11 @@ from django.http import HttpResponse
 def index (request):
     return render(request, 'index.html')
 
+def contact (request):
+    return render(request, 'contact.html')
+
+def ingresso (request):
+    return render(request, 'ingresso.html')
+
+def ingresso_list (request):
+    return render(request, 'ingresso_list.html')

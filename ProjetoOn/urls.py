@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from core import views
 from core.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index) #página index (padrão)
+    path('', index, name='index'),#página index (padrão) - name='' torna acessível a chamativa da url dentro do code
+    path('contato', views.contact, name='contact'),
+    path('ingresso', views.ingresso, name='ingresso'),
+    path('ingressos', views.ingresso_list, name='ingressos'),
 ]
