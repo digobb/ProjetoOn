@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles', #irá servir arquivos estáticos (pastas com nome Static)
     #core aplicação base
     'core',
+    'catalog',
     'debug_toolbar',
 ]
 
