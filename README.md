@@ -3,11 +3,21 @@
 
     
 # Projeto On
+🚧 estamos em construção ...
 
 O Projeto TCC On tem como objetivo uma nova forma de compra de ingressos on-line para festas e eventos da região, facilitando sua compra e validação no dia do evento. 
 
-## 🚨
+## Após realizr o clone do projeto, rodar os comandos abaixo! 🚨
 
-🚧 estamos em construção ...
+```sh
+python -m pip install Django
+```
+```sh
+python -m pip install Pillow
+```
+```sh
+pip install django-debug-toolbar
+```
+
 
   
