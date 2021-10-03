@@ -1,0 +1,1 @@
+default_app_config = 'catalog.apps.CatalogConfig' #irá varrer e verificar que em apps.py há uma configuracao
