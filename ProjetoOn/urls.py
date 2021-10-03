@@ -19,9 +19,11 @@ from core import views
 from core.views import index
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index, name='index'),#página index (padrão) - name='' torna acessível a chamativa da url dentro do code
+    path('admin/', admin.site.urls),  # area administrativa
+    # página index (padrão) - name='' torna acessível a chamativa da url dentro do code
+    path('', index, name='index'),
     path('contato', views.contact, name='contact'),
     path('ingresso', views.ingresso, name='ingresso'),
     path('ingressos', views.ingresso_list, name='ingressos'),
+
 ]
