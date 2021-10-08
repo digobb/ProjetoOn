@@ -4,7 +4,3 @@
 #paypal input[type=image] {
     display: none;
 }
-
-.navbar-default{
-    background-color: blueviolet !important;
-}

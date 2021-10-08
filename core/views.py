@@ -11,5 +11,4 @@ def contact (request):
 def ingresso (request):
     return render(request, 'ingresso.html')
 
-def ingresso_list (request):
-    return render(request, 'ingresso_list.html')
+    

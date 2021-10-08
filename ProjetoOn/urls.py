@@ -14,16 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import(
+    path,
+    include,
+)
 from core import views
-from core.views import index
+from core.views import index 
+from catalog import(
+    urls,
+    #views as views_catalog,
+) 
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # area administrativa
     # página index (padrão) - name='' torna acessível a chamativa da url dentro do code
     path('', index, name='index'),
-    path('contato', views.contact, name='contact'),
-    path('ingresso', views.ingresso, name='ingresso'),
-    path('ingressos', views.ingresso_list, name='ingressos'),
-
+    #path('contato', views.contact, name='contact'),
+    #path('ingresso', views.ingresso, name='ingresso'),
+    path('ingressos/', include('catalog.urls')), #irá verificar dentro de catalog/templates/urls.py a view a ser retornada 
 ]
