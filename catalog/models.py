@@ -35,6 +35,9 @@ class Ingresso(models.Model):
     def __str__(self):
         return self.titulo #define que o objeto se chamará o "titulo"
 
+    def get_absolute_url(self):
+        return reverse('catalog:ingresso', kwargs={'slug': self.slug})
+    
 
 class TipoIngresso(models.Model):
     descricaoTipoIngresso = models.CharField(

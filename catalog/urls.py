@@ -4,6 +4,6 @@ from catalog import views
 import catalog
 
 urlpatterns = [
-    path('', views.ingresso_list, name='ingresso_list',)
-    
+    path('', views.ingresso_list, name='ingresso_list'),
+    path(r'ingressos/(?P<slug>[\w_-]+)/$', views.ingresso, name='ingresso'),
 ]
