@@ -1,3 +1,4 @@
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -8,7 +9,11 @@ def index (request):
 def contact (request):
     return render(request, 'contact.html')
 
-def ingresso (request):
-    return render(request, 'ingresso.html')
+class Login(LoginView):
+    template_name = 'login.html'
+
+class Logout(LogoutView):
+    template_name = 'index.html'
+
 
     

@@ -41,8 +41,14 @@ INSTALLED_APPS = [
     'core',
     #catalog aplicação /models
     'catalog',
+    'widget_tweaks',
     'debug_toolbar',
 ]
+
+#auth
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_UREL = 'index'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

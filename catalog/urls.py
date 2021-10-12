@@ -1,9 +1,10 @@
 from django.urls import path
 from django.urls.conf import include
 from catalog import views
-import catalog
 
+#\w = qualquer caracter alfanumerico
+# _ ou - pode conter na url
 urlpatterns = [
     path('', views.ingresso_list, name='ingresso_list'),
-    path(r'ingressos/(?P<slug>[\w_-]+)/$', views.ingresso, name='ingresso'),
+    path('<slug>', views.ingresso, name='detalhe_ingresso'),
 ]

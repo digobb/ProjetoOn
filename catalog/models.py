@@ -2,6 +2,9 @@ from enum import unique
 from django.db import models
 from django.db.models.fields import CharField
 
+from django.urls import reverse
+
+
 # Ajustar modelagem
 # Carrinho no centro e deve ser criado uma classe evento, onde esta
 
@@ -34,9 +37,6 @@ class Ingresso(models.Model):
 
     def __str__(self):
         return self.titulo #define que o objeto se chamará o "titulo"
-
-    def get_absolute_url(self):
-        return reverse('catalog:ingresso', kwargs={'slug': self.slug})
     
 
 class TipoIngresso(models.Model):

@@ -12,9 +12,11 @@
 {% for ingresso in ingressos %}
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <a href="#">
-                <img src="http://placehold.it/350x250" alt="" />
+        {% if ingresso.imgEvento %}
+            <a href="">
+                <img src="{{ingresso.imgEvento.url}}" alt="{{ ingresso.titulo }}" />
             </a>
+        {% endif %}
             <div class="caption">
                 <h3>{{ ingresso.titulo }}</h3>
                 <p>{{ ingresso.descricao }}</p>

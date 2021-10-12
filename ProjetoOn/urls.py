@@ -13,17 +13,19 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from os import name
 from django.contrib import admin
 from django.urls import(
     path,
     include,
 )
 from core import views
-from core.views import index 
+from core.views import Login, Logout, index 
 from catalog import(
     urls,
 
-) 
+)
+from django.contrib.auth.views import LoginView
 
 
 urlpatterns = [
@@ -33,4 +35,7 @@ urlpatterns = [
     path('contato', views.contact, name='contact'),
     #path('ingresso', views.ingresso, name='ingresso'),
     path('ingressos/', include('catalog.urls')), #irá verificar dentro de catalog/templates/urls.py a view a ser retornada 
+    #login e logout
+    path('login/', Login.as_view(), name="login"),
+    path('logout/', Logout.as_view(), name="logout"),
 ]

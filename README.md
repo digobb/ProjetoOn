@@ -18,6 +18,7 @@ python -m pip install Pillow
 ```sh
 pip install django-debug-toolbar
 ```
-
-
+```sh
+pip install django-widget-tweaks
+```
   
