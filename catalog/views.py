@@ -11,10 +11,11 @@ def ingresso_list(request):
     }
     return render(request, 'catalog/ingresso_list.html', context) #para cada aplicação irá buscar a pasta template e renderizar 
 
-def ingresso(request, titulo):
-    ingresso = Ingresso.objects.get(titulo = titulo)
+def ingresso(request):
+    #ingresso = Ingresso.objects.get(titulo = titulo)
     context = {
-        'ingresso':ingresso
+        #'ingresso':ingresso
+        'ingresso': Ingresso.objects.all()
     }
     return render(request, 'catalog/ingresso.html', context)
 

@@ -6,5 +6,5 @@ from catalog import views
 # _ ou - pode conter na url
 urlpatterns = [
     path('', views.ingresso_list, name='ingresso_list'),
-    path('<slug>', views.ingresso, name='detalhe_ingresso'),
+    path('ingresso', views.ingresso, name='ingresso'),
 ]

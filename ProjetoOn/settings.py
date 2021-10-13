@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
 ]
 
-#auth
+#Auth - direcionamento login e logout
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'index'
 

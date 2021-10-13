@@ -33,7 +33,8 @@ urlpatterns = [
     # página index (padrão) - name='' torna acessível a chamativa da url dentro do code
     path('', index, name='index'),
     path('contato', views.contact, name='contact'),
-    #path('ingresso', views.ingresso, name='ingresso'),
+
+    path('ingresso/', include('catalog.urls'), name='ingresso'),
     path('ingressos/', include('catalog.urls')), #irá verificar dentro de catalog/templates/urls.py a view a ser retornada 
     #login e logout
     path('login/', Login.as_view(), name="login"),
