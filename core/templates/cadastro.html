@@ -22,7 +22,7 @@
         </div>
         <div class="jumbotron page-header">
         <center>
-         <p>Efetue o login abaixo ou cadastre-se.</p>
+         <p>Cadastre-se informando os dados abaixo.</p>
          </center>
         </div>
         <form class="form-horizontal" method="post">
@@ -34,10 +34,10 @@
             {% endfor %}
             <fieldset>
                 <div class="form-group{% if form.username.errors %} has-error{% endif %}">
-                  <label for="{{ form.username.auto_id }}" class="col-md-3 control-label">{{ form.username.label }}</label>
+                  <label for="{{ form.password1.auto_id }}" class="col-md-3 control-label">{{ form.username.label }}</label>
                   <div class="col-md-9">
-                    {% render_field form.username class="form-control" %}
-                    {% for error in form.username.errors %}
+                    {% render_field form.password1 class="form-control" %}
+                    {% for error in form.password1.errors %}
                     <span class="help-block">{{ error }}</span>
                     {% endfor %}
                   </div>

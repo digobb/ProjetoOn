@@ -47,7 +47,7 @@ INSTALLED_APPS = [
 
 #auth
 LOGIN_URL = 'login'
-LOGIN_REDIRECT_UREL = 'index'
+LOGIN_REDIRECT_URL = 'index'
 
 
 MIDDLEWARE = [

@@ -37,8 +37,12 @@
       </form>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><i class="far fa-user"> </i> Minha Conta</a></li>
-            <li><a href="{% url 'contact' %}"><i class="far fa-envelope"></i> Contato</a></li>
+          <li><a href="{% url 'contact' %}"><i class="far fa-envelope"></i> Contato</a></li>
+          {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}"><i class="fas fa-sign-out-alt"></i> </i> Sair</a></li>
+          {% else %}
+          <li><a href="{% url 'login' %}"><i class="far fa-user"></i> </i> Entrar</a></li>
+          {% endif %}
           </ul>
         </div>
       </div>

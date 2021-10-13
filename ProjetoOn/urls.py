@@ -37,5 +37,6 @@ urlpatterns = [
     path('ingressos/', include('catalog.urls')), #irá verificar dentro de catalog/templates/urls.py a view a ser retornada 
     #login e logout
     path('login/', Login.as_view(), name="login"),
+    path('cadastro/', views.register, name="cadastro"),
     path('logout/', Logout.as_view(), name="logout"),
 ]
