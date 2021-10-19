@@ -23,7 +23,6 @@ class RegisterView(CreateView):
     form_class = UserCreationForm
     template_name = 'cadastro.html'
     model = User
-
 register = RegisterView.as_view()
 
     

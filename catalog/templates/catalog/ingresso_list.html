@@ -12,15 +12,20 @@
 {% for ingresso in ingressos %}
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-        {% if ingresso.imgEvento %}
             <a href="">
-                <img src="{{ingresso.imgEvento.url}}" alt="{{ ingresso.titulo }}" />
+            {% if ingresso.imgEvento %}
+                <img src="{{ingresso.imgEvento.url}}" alt="{{ ingresso.titulo }}" height="283" width="280"/>
+            {% endif %}
             </a>
-        {% endif %}
             <div class="caption">
                 <h3>{{ ingresso.titulo }}</h3>
                 <p>{{ ingresso.descricao }}</p>
-                <p><a href="#" class="btn btn-success" role="button"><i class="fas fa-cart-plus"></i> Comprar</a> <a href="{% url 'ingresso' %}" class="btn btn-default" role="button"><i class="far fa-eye"></i> Ver</a></p>
+                <ul class="list-group list-group-flush">
+                    <p class="card-text"><i class="fas fa-map-marker-alt"></i> {{ ingresso.localEvento }} </p>
+                    <p class="card-text"><i class="far fa-clock"></i> {{ ingresso.horaEvento }}
+                    <li class="list-group-item"><strong>R$</strong> {{ ingresso.precoIngresso }} </li>
+                </ul>
+                <p><a href="#" class="btn btn-success" role="button"><i class="fas fa-cart-plus"></i> Comprar</a> <a href="{% url 'ingresso' ingresso.id %}" class="btn btn-default" role="button"><i class="far fa-eye"></i> Ver</a></p>
             </div>
         </div>
     </div>

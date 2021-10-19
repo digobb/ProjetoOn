@@ -11,7 +11,9 @@
 <div class="row">
   <div class="col-sm-4">
       <a href="#" class="thumbnail">
-          <img src="http://placehold.it/350x250" alt="" />
+      {% if ingresso.imgEvento  %}
+          <img src="{{ ingresso.imgEvento.url }}" alt="{{ ingresso.titulo }}"/>
+      {% endif %}
       </a>
   </div>
   <div class="col-sm-8">

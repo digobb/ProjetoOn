@@ -10,7 +10,7 @@ from django.urls import reverse
 
 class Ingresso(models.Model):
     titulo = models.CharField('titulo', max_length=100)
-    slug = models.SlugField('Identificador', max_length=100)
+    slug = models.SlugField('slug', max_length=100)
     descricao = models.CharField('descricao', max_length=280)
     dataEvento = models.DateField('dataEvento')
     imgEvento = models.ImageField(
@@ -37,6 +37,10 @@ class Ingresso(models.Model):
 
     def __str__(self):
         return self.titulo #define que o objeto se chamará o "titulo"
+
+    def get_absolute_url(self):
+       return reverse("catalog:ingresso", kwargs={"slug": self.slug})
+    
     
 
 class TipoIngresso(models.Model):
